@@ -19,18 +19,18 @@ Dependencies:
 Usage:
 1. Auto (use this only)
   - python auto.py -i "input video path" -t "threshold value"
-    Note:
-      -- default value of threshold is 5.
-      -- user is expected to analyse the stats file and determine a suitable threshold value and re-run the code.
-      -- we are working on automating this process as well. (coming soon...)
+  - Note:
+      - default value of threshold is 5.
+      - user is expected to analyse the stats file and determine a suitable threshold value and re-run the code.
+      - we are working on automating this process as well. (coming soon...)
       
 2. OCR
   - python ocr.py -i "input image path"
   
 3. SCD
   - scenedetect -i "input video path" -d content -co scenes.csv -s stats.csv -df 4
-    options:
-        -- d: content/threshold (2 types of detectors)
-        -- co: CSV output path for time-stamps.
-        -- s: CSV output path for frame-by-frame statistics.
-        -- df: Down-sampling factor for faster processing.
+  - options:
+      - d: content/threshold (2 types of detectors).
+      - co: CSV output path for time-stamps.
+      - s: CSV output path for frame-by-frame statistics.
+      - df: Down-sampling factor for faster processing.
