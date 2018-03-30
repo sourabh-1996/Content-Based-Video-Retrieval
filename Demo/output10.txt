@@ -1,0 +1,22 @@
+how are we going to compute and I'm at a distance
+ the standard algorithm is with dynamic programming dynamic programming is a tabular method of computation what we're going to do is we're going to compute D the distance between two strings X & Y axis length in wavelength M by combining solutions to sub problems and come by and solutions to sub problem is the intuition of all dynamic programming algorithms is very simple where can I buy small prefixes of length I of string X & J of string why will compute the distance between those strings and what computer are larger distances for larger strings based on those previously computed similar values other words we're going to compute the distance i j between prefixes of string acts of length
+and prefixes of string y of length J for all I and J will end up in the end with the DM distance
+ so let's look at the actual equation here's the equation for defining minimum at a distance and I've given you Levenstein distance which is the distance when there is a cost of 1/4 insertions 1/4 deletions and 14724 substitutions excuse me
+ so let's look at the initialization condition so the day we first say that any characters in X so this is the X string the eye characters in X string the distance between those and the null string and why is the cost of deleting each of those characters so the cost
+those his is the length of the string were deleting each character and similarly for inserting all the characters in 2y to create the string why the distance between the null string of X and the string twice just the length of why the insertion cost of why the recurrence relation so walking through string Axe and walking through string why
+ will have the distance in any particular cell of our Matrix is going to be the minimum way of getting to that sell from three previous cells if we go from the string I that's one short person would deleting
+ one more thing and I
+ to make a j or we're inserting one thing into J to make it longer or were substituting between the previous string
+I have length I'm exiting 5 - 1 + y of length J - 1 we're adding a new character if it's the same in both strings we have a cost of 0 if it's different we have a substitute cost of 2 and then at the end the distance between the two strings is simply the is simply the the D of NM the upper right corner of the Matrix so here's our table
+ and we can fill in each element of the table from using this equation that tells us the deletion cost the insertion cost and the substitution cost
+ so what to do that I put the equation up here up here in the corner so we want to know what's the distance between the nail string of intention of the
+flexicution obviously zero the null string the string I to the string nothing is still cost of deleting and I that's one
+ so now it's for the compute what's the cost of converting in to eat while intuitively we expect it's going to be a deletion in a substitution so let's see if that works out right so feed them
+ element in the cell is the minimum of three values it's this distance plus one this distance plus one or this distance Plus either too if I N 0 or different or 0 if they're the same well they're different so it's the minimum of I + 1 which is 201 + 1 which is 2 or 0 + 2 which is
+so we have to so we can write to in this cell
+ similarly if we want to know the distance between I N & E it's the minimum distance of I am to nothing + 122 + 1 or 3
+ or the different distance between i and e plus the cost of adding in that end or 3
+ or the cost of having just an eye and adding in that and Touhy substitution which is two or three so again we have three years we have a 2 and we have a 3 and if we continue along this manner again in each case with me the three previous sales and using this equation over here will slowly end up with
+salon
+ and if we continue along this in this manner we're going to end up with the following and complete table so every selling this table let's take this cell tells you the cost of sub of the day at a distance of editing the string int e and turned into the string exe and that means that this value here in the upper right corner is the cost the edit distance between intention and execution the cost of turning intention and execution and we see the value in which week earlier said was the Levenstein distance so we have Levenstein distance equals 8
+that's our algorithm for computing minimum at a distance
