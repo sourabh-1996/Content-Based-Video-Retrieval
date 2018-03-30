@@ -11,10 +11,10 @@ Scripts:
 3. scd.py - detects scene changes and outputs time-stamps and frame numbers(CSV format).
 
 Dependencies:
-1.OpenCv (python)
-2.pyTesseract
-3.PySceneDetect
-4.PIL
+1. OpenCv (python).
+2. PyTesseract (python).
+3. PySceneDetect (python and terminal).
+4. PIL (python).
 
 Usage:
 1. Auto (use this only)
