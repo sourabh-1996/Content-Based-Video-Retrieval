@@ -1,0 +1,14 @@
+classification,example_text
+noise,Dont cross talk when I'm teaching
+noise,Naveen stand up and get out of class
+noise,Get out of the class
+noise,Dont make fun of the teacher
+noise,Are you understanding what I'am teaching ?
+noise,If you continue taking i will go out of class
+noise,Can you please shut your mouth
+noise,Who is taking in the class
+notnoise,In computer science arranging in an ordered sequence is called "sorting".
+notnoise,Sorting is a common operation in many applications and efficient algorithms to perform it have been developed.
+notnoise,Exchange two adjacent elements if they are out of order. Repeat until array is sorted.
+notnoise,Partition the array into two segments. In the first segment all elements are less than or equal to the pivot value.In the second segment all elements are greater than or equal to the pivot value. Finally sort the two segments recursively.
+notnoise,Optical sorting is an automated process of sorting solid products using cameras and/or lasers and has widespread use in the food industry.
