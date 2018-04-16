@@ -1,0 +1,24 @@
+knowing the edit distance between two strings is important but it turns out not to be sufficient we often need something more which is the alignment between two strings we want to know which symbol in string X corresponds to which symbol and string wine this is going to be important for any application we have a better distance from often from spell-checking to machine translation even in computational biology is we keep a back trace the Backstreets is simply a pointer when we enter each cell in The Matrix that tells us where we came from and and when we reach the and the upper right corner from Matrix we can use that point then Trace back through all the pointers to read off the alignment
+let's see how this works in practice again I've given you the equation for each cell in edit distance
+and if we put in some of our values that we saw earlier I'll start by putting in some values so
+ all right so we can ask how did we get to this value 2
+ two is that we picked a minimum of three values we could either take so to is the distance this to hear the distance between the string I in the stringy and we got that by saying it's either the alignment between nothing and e-plus the insertion of an extra eye
+ so that's dumb distance of 1 + 1 is 2 or 0 + 2 is 2 or one plus one is two so we had three different
+use so we were asking which of which minimum path did we come from really they're all the same we could have come from any of them and that's going to be true for this value 3 as well it we computed as the minimum of 2 + 101 + 2 or 2 + 1/2 this could come from here here or hear and similarly that's going to be true I didn't work out the Rhythm take for you but it's going to be true for the cell to you can work it out for yourself here we have a diff distance difference so the distance between I N T E & E we could compute that by taking the distance
+but it cost us to to them convert int eaten nothing and then add another insertion for eBay that would be that would be silly because 4 + 1 is 5 and there's a cheaper way
+to get from int to eat and that is that it cost us nothing to match this E2 that eat so our previous alignment between int and nothing we we can have zero from 3 to get at 3 so
+ the minimum path for this 3 came from that 3 so well in some cases sell came from any places in this case it on him to goosley came from this previous three until we're going to do this for every cell in the array and the results will look something like this where we have for every cell in every place it could have come from and you'll see that in a lot of cases any path could have worked so the 6 could have come from any place but crucially the spinal alignment is 8 that tells us the final edit distance between intentional
+are Trace back tells us it came from the best alignment between intentio and execution which came from the best alignment from intense I from execute I and so on I'm in so we can trace back this alignment and get ourselves alignment that tells us that this an match this and and this match this so and so on but maybe here we have an insertion rather than the clean lining up
+ Computing the back Trace very simple
+ we take our same minimum edited since I wasn't that we've seen and here I've label the cases for you so when we're looking to sell we're either deleting inserting or substituting and we simply add pointers so in the case where where inserting leap
+left in the case where were deleting Point down in the case where I'm substituting Point diagonal you have shown you that arrows on the previous slide
+ so we can look at this distance Matrix and think about the pads from the origin
+ here
+ to the end of The Matrix and any non decreasing path that goes from the origin to the point then NM corresponds to some alignment of the two sequences
+ an optimal alignment then
+ is composed of optimal subsequences and that's the idea that makes it possible to use dynamic programming for this task
+so the resulting of our back-trace are two strings and then the alignment between them so we will will know which wich things lined up exactly which things line up with substitutions and then when we should have insertions or deletions
+ what's the performance of this algorithm
+ in time it's order NM because our distance Matrix is of size n m
+ we were telling each cell one time. The same is true for space and then the back Trace then we have to in the worst-case go for if we had an deletions and M insertions we have to go then and plus em with the touch and + m cells but not more than
+that's our back Trace algorithm for computing alignments

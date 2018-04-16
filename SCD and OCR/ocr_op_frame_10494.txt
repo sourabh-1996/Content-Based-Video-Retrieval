@@ -1,0 +1,14 @@
+Minimum Edit
+
+ 
+
+Distance
+
+Computing Minimum
+
+Edit Distance
+
+
+KEYWORDS:
+
+(49.0, u'minimum edit distance computing minimum edit distance')
