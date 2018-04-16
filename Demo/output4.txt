@@ -1,0 +1,51 @@
+now we're going to talk about text processing the most basic and fundamental to we have for text processing is the regular expression expression is a formal language were looking for woodchucks in a text document and woodchucks can be expressed in a number of ways we can have a singular woodchuck we could have the plural S at the end we could have a capital letter at the beginning of a lowercase in any combination of these tools to deal with this problem
+ so the simplest fundamental to the regular expression is the distinction the square brackets in a regular expression pattern mean any letter inside the square brackets so lowercase w capital W square bracket means either a lowercase w or capital W so we can combine that with woodchuck to match
+lowercase or uppercase woodchuck and similarly with digits 1 2 3 4 and so on 5 6 7 8 9 0 matches any digit that was kind of annoying to write so we'd like to do instead is have little ranges the range 0 3-9 to square bracket 0-9 means any character inside that range and the range a dash Z10 character between a capital letter between a and z let's see if we can see how that works so here's an example of a little too were going to use for regular Expressions searching and we have a little texture from dr. Seuss we looked then we saw him stepping on the mat we looked and we saw him the Cat in the Hat
+and let's try our our disjunctions so we can have
+finding this this. Here has plans this thing or not. But it misses these two does Elsa find some other things let's fix the first problem and how do we not get the dogs in the middle of but those capitalize does at the beginning of what we're going to use our and
+ are disjunction
+ and sure enough that correctly now matches the to beginning of line does but you know star pattern although it now capture something at Miss before it still captures things that shouldn't be capturing other there and belies so we need to augment are patterns I hope there's not an alphabetic character around the meaning of space
+punctuation or something on alphabetic so let's just say non alphabetic
+ afterwards great that gets rid of the other and their doesn't sell Blythe cuz the light has an alphabetic character before it lets go fix blive by saying non alphabetic before it's either
+ there we go now we found all of our all of our does
+ so we we looked for the we noticed it missed capitalized example so we we added some we made our pattern more more more expensive we increase the yield of our pattern but that incorrectly returns more things so then we'd eat we did mcspadden more precise by by specifying more things this process
+that we went through is based on fixing two kinds of Errors when is matching strings we shouldn't have Matt's we match today are we matched other so that's trying to add that solving the problem of false positives are there called type 1 errors we were matching things we shouldn't match and the other thing we went through is to solve the problem of not matching things we should have nap so we miss those Capital does and that's dealing with the problem of false negatives are type 2 errors and it turns out in that in natural language processing we're constantly dealing with these two classes of Errors so reducing the error rate in any application were going to see this again and again in this course involves two antagonistic efforts we're increasing the accuracy or Precision which helps us minimize those false positives or minimizing or false negative
+7 summary regular Expressions play a surprisingly large role in text processing and the sophisticated sequences of regular Expressions that we've seen very simple versions of are often the first model for almost any text processing tasks for harder tasks we are offering going to be using and roll introduced these these machine learning classifiers that are much more powerful but it turns out even then regular expressions are used as features in the class of fires are very useful at capturing generalizations
+so you're going to be returning again and again to regular expressions
+the capital W and lowercase w and she's me capital w in a lowercase w and that's going to match as you can see the capitol W's and the lowercase w is just fine
+ or we can have all the Eevee's and all the emblems that's going to match all the ease in the atoms or in our ranges we can have all the capital letters
+ is all the capital letters being matched we can have all the lower case letters
+ it's lowercase letters there or we can match all of the alphanumeric characters think for a second how to match all of the alphanumeric characters can have
+ or we can simply match some of the non alphanumeric characters we could have space and!
+describe a person that's going to match as you can see some of the no no cat characters okay so let's go on another kind of thing we might want to do in our regular Expressions is negation in our discussions we might want to say we don't want some kind of set of letters so for example we might want to say not a capital letter we can do that by saying carrot a through z in are square brackets carrot when it occurs right after the square brackets memes and not carry A to Z not a capital letter carrot a little a means neither a capital nor little a
+and carrot carrot means not an e and not a carrot so you can see what the carrot when it occurs right after the square bracket means not but later
+I mean simply just a carrot so let's take a look at that
+ so we can try finding all of the non capital letters
+ is all in on capital letters have it all done on exclamation points
+ those things and the non alphanumerics
+ sorry I didn't not alphabetics
+ there's just two spaces in exclamation points so you can see
+ how about looking for a carrot many carats in here there are none so there are no carrots into nothing yet nothing matches
+ another kind of disjunction which can be used for longer strings is the pipe symbol sometimes
+or or pipe or just distinction so groundhog or woodchuck can beat will mean either the string groundhog or the string would woodchuck so we can use the pipe symbol sometimes for the same thing as the square brackets o a pipe B pipe C is the same as square bracket ABC
+ and we can combine these things we can combine the square brackets in the pipe so we can have groundhog or woodchuck but use are square brackets for expressing capitalization at the beginning
+ we can see that in our in our little examples we can have looked or step and sure enough they are the words look and stem are both highlighted or we can have sex like just random things you have to be words we can have all of the app
+give me all of the apps and all the books and any Brandon string is fine sets of special characters that are very important regular Expressions them? Means that the previous character was optional so the? After this you hear me will match the word color with or without the u with without the u with the U
+ enter the to clean the operators named for Steven cleaning cleaning star matches zero or more of the previous character so here's the star it matches 0 morrows so we have one followed by 0 or more other owes so there's the initial o and 0 other Rose and then RH! Here's our initial of followed by 100 and then a chance
+two three and someone sometimes more simple we can have them the cleaning plus so that means one or more of the previous character so there's Ro followed by the plus meaning one or more o
+ so he's one of theirs two of those three hours and so on and the. Is a special character meaning in a character so begin can match begin begun bg380 matches anything
+ and finally two special characters
+ the current matches the beginning of the line so carrot capital A through Z matches a capital letter the beginning of the line the dollar sign matches the end of a line so A through Z dollar matches the end of a line like the capital letter at the end of the line and then
+do you want to talk about it. It's in. There a special character we have to escape them then backslash. Means a. So. By itself means any character backslash. Means a real. Let's go look at some of these
+ so here's the letter O here's 0 or if I can make it let's make it 1 tomorrow first here's one or more o
+ so there's one over here and two o's over here
+ then and now it's looking in begins and ends of lines here is
+ capital letters at the beginning of the line
+ here's
+capital letters at the end of the line
+ there aren't any
+ here's punctuation at the end of the line
+ there's only exclamation points at the end of the line
+ here's all the periods normally up the backsplash are. And if we didn't backslash The. We would get all the characters cuz. Matches everything
+ let's do one more example let's look at this little sentence hear the other one they are the Blythe one lets us walkthrough how to search for word let's find the word the other words I in this little passage something for yourself how you would do this for the simplest thing you might do is just type the the
+ and that does a good job of
